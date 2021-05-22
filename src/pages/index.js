@@ -13,7 +13,7 @@ const Index = () => (
       justifyContent="center"
     >
       <Box>
-        <Heading fontSize="3xl" fontFamily="serif">
+        <Heading fontSize="3xl">
           A few words about this blog platform, Ghost, and how this site was
           made
         </Heading>
