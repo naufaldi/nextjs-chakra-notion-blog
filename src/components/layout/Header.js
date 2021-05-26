@@ -1,8 +1,33 @@
 import { Flex, Box, IconButton, Heading, Container } from '@chakra-ui/react';
+import { useState } from 'react';
 import Link from '../misc/Link';
+import { MotionBox } from '../misc/motion';
+import { motion } from 'framer-motion';
 export default function Header(params) {
+  const [navView, setnavView] = useState(false);
+
+  const navVariant = {
+    opened: {
+      paddingTop: '40px',
+      paddingBottom: '40px',
+      visibility: 'visible',
+      transition: {
+        opacity: 1,
+        mass: 0,
+      },
+    },
+    closed: {
+      visibility: 'hidden',
+      paddingBottom: 0,
+      paddingTop: 0,
+      transition: {
+        opacity: 0,
+      },
+    },
+  };
+  const Temp = motion.div;
   return (
-    <Box as="header" borderBottom="1px" borderColor="gray.200" py="4">
+    <Box as="header" borderBottom="1px" borderColor="gray.200" py="4" mb="5">
       <Container maxW="container.xl">
         <Flex alignItems="center">
           <Heading
@@ -33,9 +58,17 @@ export default function Header(params) {
             </Link>
           </Flex>
           <IconButton
+            onClick={() => setnavView(!navView)}
             display={['flex', 'flex', 'none']}
             size="lg"
+            color="black"
             bgColor="white"
+            aria-label="navbar button"
+            _focus={{
+              border: 'none',
+              backgroundColor: 'white',
+            }}
+            transform={navView ? 'rotate(90deg)' : 'none'}
             icon={
               <svg
                 width="24px"
@@ -54,8 +87,10 @@ export default function Header(params) {
             }
           />
         </Flex>
-        <Flex
-          py="0"
+        <MotionBox
+          variants={navVariant}
+          animate={navView ? 'opened' : 'closed'}
+          py="10"
           w="72"
           mx="auto"
           justifyContent="space-between"
@@ -63,14 +98,14 @@ export default function Header(params) {
           fontSize="sm"
           fontWeight="bold"
           fontFamily="serif"
-          visibility="hidden"
           h="0"
+          display={['flex', 'flex', 'none']}
         >
           <Link>BLOG</Link>
           <Link>ABOUT</Link>
           <Link>LINKS</Link>
           <Link>PROJECTS</Link>
-        </Flex>
+        </MotionBox>
       </Container>
     </Box>
   );
