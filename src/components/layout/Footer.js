@@ -52,15 +52,28 @@ export default function Footer(params) {
           >
             Next Notion
           </Heading>
-          <Text textAlign="center" w="96" mt="5" mb="5" fontSize="xs">
+          <Text
+            textAlign="center"
+            w="96"
+            mt="5"
+            mb="5"
+            fontSize="xs"
+            padding={['5', '5', '0']}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
             velit tempus erat egestas efficitur. In hac habitasse platea
             dictumst. Fusce a nunc eget ligula suscipit finibus.
           </Text>
           <Flex w="96" justifyContent="center" gridColumnGap="5">
-            <Link fontFamily="sans-serif">Twitter</Link>
-            <Link fontFamily="sans-serif">LinkedIn</Link>
-            <Link fontFamily="sans-serif">RSS</Link>
+            <Link fontFamily="sans-serif" color="white">
+              Twitter
+            </Link>
+            <Link fontFamily="sans-serif" color="white">
+              LinkedIn
+            </Link>
+            <Link fontFamily="sans-serif" color="white">
+              RSS
+            </Link>
           </Flex>
         </Box>
         <Box>
