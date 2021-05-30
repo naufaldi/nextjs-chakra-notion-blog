@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from '../misc/Link';
 import { MotionBox } from '../misc/motion';
 import { motion } from 'framer-motion';
+import { DarkModeSwitch } from '../misc/DarkModeSwitch';
 export default function Header(params) {
   const [navView, setnavView] = useState(false);
 
@@ -29,7 +30,7 @@ export default function Header(params) {
   return (
     <Box as="header" borderBottom="1px" borderColor="gray.200" py="4" mb="5">
       <Container maxW="container.xl">
-        <Flex alignItems="center">
+        <Flex alignItems="center" justifyContent="center">
           <Heading
             as="h1"
             fontWeight="light"
@@ -40,22 +41,24 @@ export default function Header(params) {
             Next Notion
           </Heading>
           <Flex
-            w="72"
             justifyContent="space-between"
             display={['none', 'none', 'flex']}
           >
-            <Link fontWeight="bold" fontFamily="serif">
+            <Link fontWeight="bold" fontFamily="serif" mx="2">
               BLOG
             </Link>
-            <Link fontWeight="bold" fontFamily="serif">
+            <Link fontWeight="bold" fontFamily="serif" mx="2">
               ABOUT
             </Link>
-            <Link fontWeight="bold" fontFamily="serif">
+            <Link fontWeight="bold" fontFamily="serif" mx="2">
               LINKS
             </Link>
-            <Link fontWeight="bold" fontFamily="serif">
+            <Link fontWeight="bold" fontFamily="serif" mx="2">
               PROJECTS
             </Link>
+            <Box mx="4">
+              <DarkModeSwitch />
+            </Box>
           </Flex>
           <IconButton
             onClick={() => setnavView(!navView)}
