@@ -76,7 +76,7 @@ export default function Footer(params) {
             </Link>
           </Flex>
         </Box>
-        <Box>
+        <Box p="2">
           <Text
             textAlign="center"
             mt="10"
