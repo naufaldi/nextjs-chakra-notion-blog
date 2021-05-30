@@ -13,13 +13,14 @@ const fonts = {
 };
 
 const fontSizes = {
-  xs: '14px',
-  sm: '16px',
-  md: '20px',
-  lg: '22px',
-  xl: '32px',
-  '2xl': '44px',
-  '3xl': '54px',
+  xs: '12px',
+  sm: '14px',
+  md: '16px',
+  lg: '20px',
+  xl: '22px',
+  '2xl': '32px',
+  '3xl': '44px',
+  '4xl': '54px',
 };
 
 const breakpoints = createBreakpoints({
