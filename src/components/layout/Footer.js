@@ -14,7 +14,7 @@ const textDecorFooter = [
 
 export default function Footer(params) {
   return (
-    <Box as="footer" minH="36" backgroundColor="black" color="white">
+    <Box as="footer" backgroundColor="black" color="white">
       <Container
         maxW="container.xl"
         display="flex"
