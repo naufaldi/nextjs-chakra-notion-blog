@@ -1,13 +1,17 @@
 import React from 'react';
+import Layout from '@/components/layout/Layout';
+import { Container } from '@/components/misc/Container';
+import HeroPost from '@/components/Post/HeroPost';
+import AuthorBox from '@/components/Post/AuthorBox';
 
 const Post = () => {
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam maxime
-      doloremque labore eaque quis dolores harum aspernatur, facere velit earum
-      architecto commodi. Veniam libero quam cupiditate, hic asperiores maxime
-      atque.
-    </div>
+    <Layout>
+      <Container>
+        <HeroPost />
+        <AuthorBox />
+      </Container>
+    </Layout>
   );
 };
 
