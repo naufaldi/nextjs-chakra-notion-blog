@@ -63,17 +63,18 @@ export default function SuggestArticle() {
         </Heading>
       </GridItem>
       <GridItem
-        colSpan="8"
-        colStart="3"
+        colSpan={['12', '12', '8']}
+        colStart={['1', '1', '3']}
         display="flex"
         flexWrap="wrap"
         gridGap={8}
         justifyContent="space-evenly"
+        paddingX={['5', '5', '0']}
       >
         {dummy &&
           dummy.map((data, index) => (
             <Link href="/" passHref key={index}>
-              <Box w="64">
+              <Box w={['full', 'full', '64']}>
                 <Image
                   src={data.img}
                   width={304}

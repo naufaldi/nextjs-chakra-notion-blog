@@ -18,6 +18,7 @@ export default function AuthorBox(params) {
         pt="5"
         mt="3"
         borderTop="1px solid black"
+        paddingX={['5', '5', '0']}
       >
         <Box display="flex" flexGrow="1">
           <Avatar
@@ -43,7 +44,8 @@ export default function AuthorBox(params) {
           <Button
             width={['30%', 'full', 'full']}
             backgroundColor="white"
-            border="gray"
+            borderColor="gray.300"
+            borderWidth="1px"
           >
             <svg
               width="20"
@@ -61,7 +63,8 @@ export default function AuthorBox(params) {
           <Button
             width={['30%', 'full', 'full']}
             backgroundColor="white"
-            border="gray"
+            borderColor="gray.300"
+            borderWidth="1px"
           >
             <svg
               width="20"

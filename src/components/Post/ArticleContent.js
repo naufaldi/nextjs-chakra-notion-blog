@@ -17,6 +17,7 @@ export default function ArticleContent(params) {
       my="10"
       gridTemplateRows="auto"
       gap={8}
+      paddingX={['5', '5', '0']}
     >
       <TextWrapper>
         <Box display="flex" flexDirection="column" gridGap={5} mb="6">
@@ -51,7 +52,7 @@ export default function ArticleContent(params) {
           </Text>
         </Box>
       </TextWrapper>
-      <GridItem colSpan="8" colStart="3">
+      <GridItem colSpan={['12', '12', '8']} colStart={['1', '1', '3']}>
         <Box display="flex" flexDir="column">
           <Image
             src="/img/post/dummyPost.png"
@@ -61,7 +62,7 @@ export default function ArticleContent(params) {
           />
           <Text
             textAlign="center"
-            w="50%"
+            w={['70%', '70%', '50%']}
             mt="2"
             alignSelf="center"
             fontWeight="bold"

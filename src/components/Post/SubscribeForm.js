@@ -13,8 +13,8 @@ export default function SubscribeForm(params) {
   return (
     <Grid templateColumns="repeat(12,1fr)" templateRows="auto" w="full">
       <GridItem
-        colSpan="6"
-        colStart="4"
+        colSpan={['12', '12', '6']}
+        colStart={['1', '1', '4']}
         border="1px solid black"
         borderTop="4px solid black"
         p="10"

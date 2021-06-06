@@ -8,6 +8,7 @@ export default function ArticleFooter() {
       gridTemplateRows="auto"
       gap={8}
       w="full"
+      paddingX={['5', '5', '0']}
     >
       <GridItem
         display="flex"
