@@ -34,7 +34,7 @@ const ListArticle = () => {
           >
             {dummy &&
               dummy.map((data, index) => (
-                <Link href="/" passHref key={index}>
+                <Link href="/post/slug" passHref key={index}>
                   <GridItem as="article" x cursor="pointer">
                     <Box
                       w="full"

@@ -73,7 +73,7 @@ export default function SuggestArticle() {
       >
         {dummy &&
           dummy.map((data, index) => (
-            <Link href="/" passHref key={index}>
+            <Link href="/post/slug" passHref key={index}>
               <Box w={['full', 'full', '64']}>
                 <Image
                   src={data.img}
