@@ -5,6 +5,7 @@ import HeroPost from '@/components/Post/HeroPost';
 import AuthorBox from '@/components/Post/AuthorBox';
 import ArticleContent from '@/components/Post/ArticleContent';
 import ArticleFooter from '@/components/Post/ArticleFooter';
+import SuggestArticle from '@/components/Post/SuggestArticle';
 
 const Post = () => {
   return (
@@ -14,6 +15,7 @@ const Post = () => {
         <AuthorBox />
         <ArticleContent />
         <ArticleFooter />
+        <SuggestArticle />
       </Container>
     </Layout>
   );
