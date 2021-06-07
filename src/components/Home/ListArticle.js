@@ -35,7 +35,7 @@ const ListArticle = () => {
             {dummy &&
               dummy.map((data, index) => (
                 <Link href="/post/slug" passHref key={index}>
-                  <GridItem as="article" x cursor="pointer">
+                  <GridItem as="article" cursor="pointer">
                     <Box
                       w="full"
                       h={['max-content', 'max-content', '176px']}

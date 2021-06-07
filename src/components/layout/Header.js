@@ -2,7 +2,6 @@ import { Flex, Box, IconButton, Heading, Container } from '@chakra-ui/react';
 import { useState } from 'react';
 import Link from '../misc/Link';
 import { MotionBox } from '../misc/motion';
-import { motion } from 'framer-motion';
 import { DarkModeSwitch } from '../misc/DarkModeSwitch';
 import NextLink from 'next/link';
 export default function Header(params) {
@@ -99,7 +98,7 @@ export default function Header(params) {
           variants={navVariant}
           animate={navView ? 'opened' : 'closed'}
           py="10"
-          w="72"
+          w="80"
           mx="auto"
           justifyContent="space-between"
           display="flex"
@@ -113,6 +112,9 @@ export default function Header(params) {
           <Link>ABOUT</Link>
           <Link>LINKS</Link>
           <Link>PROJECTS</Link>
+          <Box float="right">
+            <DarkModeSwitch />
+          </Box>
         </MotionBox>
       </Container>
     </Box>

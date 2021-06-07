@@ -28,7 +28,7 @@ export default function HeroPost() {
         </Text>
       </GridItem>
       <GridItem
-        colSpan={['12', '8', '8']}
+        colSpan={['12', '12', '8']}
         justifyContent="center"
         colStart={['1', '1', '3']}
       >

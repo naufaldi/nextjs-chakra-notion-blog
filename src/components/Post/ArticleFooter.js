@@ -37,7 +37,12 @@ export default function ArticleFooter() {
               fill="#010002"
             />
           </svg>
-          <Text fontFamily="sans-serif" fontWeight="bold" ml="2">
+          <Text
+            fontFamily="sans-serif"
+            fontWeight="bold"
+            ml="2"
+            display={['none', 'none', 'block']}
+          >
             Share on Facebook
           </Text>
         </Button>
@@ -63,7 +68,12 @@ export default function ArticleFooter() {
               fill="black"
             />
           </svg>
-          <Text fontFamily="sans-serif" fontWeight="bold" ml="2">
+          <Text
+            fontFamily="sans-serif"
+            fontWeight="bold"
+            ml="2"
+            display={['none', 'none', 'block']}
+          >
             Share on Facebook
           </Text>
         </Button>
@@ -76,8 +86,10 @@ export default function ArticleFooter() {
         fontFamily="sans-serif"
       >
         <Text>Tags: </Text>
-        <Link ml="2">product design,</Link>
-        <Link>culture</Link>
+        <Link ml="2" textDecoration="underline" marginRight="2">
+          product design,
+        </Link>
+        <Link textDecoration="underline">culture</Link>
       </GridItem>
       <GridItem
         display="flex"
