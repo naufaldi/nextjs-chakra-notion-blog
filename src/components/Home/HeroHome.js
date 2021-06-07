@@ -22,8 +22,12 @@ const HeroHome = () => {
         pb="12px"
         w="full"
       >
-        <GridItem colSpan={8} colStart={3} rowStart="1">
-          <Box position="relative" w="full" h="533px">
+        <GridItem colSpan={[12, 12, 8]} colStart={[1, 1, 3]} rowStart="1">
+          <Box
+            position="relative"
+            w="full"
+            h={['max-content', 'max-content', '533px']}
+          >
             <Image
               src="/img/hero-img.png"
               width={853}
@@ -44,7 +48,12 @@ const HeroHome = () => {
             NextJS Chakra Notion Blog
           </Heading>
         </GridItem>
-        <GridItem colSpan={6} colStart={4} gap={8} rowStart={2}>
+        <GridItem
+          colSpan={[12, 12, 6]}
+          colStart={[1, 1, 4]}
+          gap={8}
+          rowStart={2}
+        >
           <Text color={colorFont} textAlign="center" fontFamily="mono">
             Why Ghost (& Figma) instead of Medium, WordPress or other options?
           </Text>

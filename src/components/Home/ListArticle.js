@@ -11,7 +11,7 @@ const ListArticle = () => {
   return (
     <Container>
       <Grid templateColumns="repeat(12,1fr)" gap={8} w="full">
-        <GridItem colSpan={6} colStart={4}>
+        <GridItem colSpan={[12, 12, 6]} colStart={[1, 1, 4]}>
           <Heading
             as="h5"
             fontWeight="bold"
@@ -22,18 +22,31 @@ const ListArticle = () => {
           >
             All articles
           </Heading>
-          <Grid templateColumns="repeat(2,1fr)" gap="8" w="full" mt="40px">
+          <Grid
+            templateColumns={[
+              'repeat(1,1fr)',
+              'repeat(2,1fr)',
+              'repeat(2,1fr)',
+            ]}
+            gap="8"
+            w="full"
+            mt="40px"
+          >
             {dummy &&
               dummy.map((data, index) => (
-                <Link href="/" passHref key={index}>
-                  <GridItem as="article" x cursor="pointer">
-                    <Box w="full" h="176px" position="relative">
+                <Link href="/post/slug" passHref key={index}>
+                  <GridItem as="article" cursor="pointer">
+                    <Box
+                      w="full"
+                      h={['max-content', 'max-content', '176px']}
+                      position="relative"
+                    >
                       <Image
                         src={data.img}
                         width={304}
                         height={176}
                         layout="responsive"
-                        al="News 1"
+                        alt="News 1"
                       />
                     </Box>
                     <Box p="20px">

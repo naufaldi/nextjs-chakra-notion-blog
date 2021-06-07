@@ -2,8 +2,8 @@ import { Flex, Box, IconButton, Heading, Container } from '@chakra-ui/react';
 import { useState } from 'react';
 import Link from '../misc/Link';
 import { MotionBox } from '../misc/motion';
-import { motion } from 'framer-motion';
 import { DarkModeSwitch } from '../misc/DarkModeSwitch';
+import NextLink from 'next/link';
 export default function Header(params) {
   const [navView, setnavView] = useState(false);
 
@@ -26,20 +26,23 @@ export default function Header(params) {
       },
     },
   };
-  const Temp = motion.div;
   return (
     <Box as="header" borderBottom="1px" borderColor="gray.200" py="4" mb="5">
       <Container maxW="container.xl">
         <Flex alignItems="center" justifyContent="center">
-          <Heading
-            as="h1"
-            fontWeight="light"
-            letterSpacing="widest"
-            flexGrow="1"
-            fontSize={['2xl', '2xl', '3xl']}
-          >
-            Next Notion
-          </Heading>
+          <Box flexGrow="1">
+            <NextLink href="/" passHref>
+              <Heading
+                as="h1"
+                fontWeight="light"
+                letterSpacing="widest"
+                fontSize={['2xl', '2xl', '3xl']}
+              >
+                Next Notion
+              </Heading>
+            </NextLink>
+          </Box>
+
           <Flex
             justifyContent="space-between"
             display={['none', 'none', 'flex']}
@@ -91,10 +94,11 @@ export default function Header(params) {
           />
         </Flex>
         <MotionBox
+          initial="closed"
           variants={navVariant}
           animate={navView ? 'opened' : 'closed'}
           py="10"
-          w="72"
+          w="80"
           mx="auto"
           justifyContent="space-between"
           display="flex"
@@ -108,6 +112,9 @@ export default function Header(params) {
           <Link>ABOUT</Link>
           <Link>LINKS</Link>
           <Link>PROJECTS</Link>
+          <Box float="right">
+            <DarkModeSwitch />
+          </Box>
         </MotionBox>
       </Container>
     </Box>
