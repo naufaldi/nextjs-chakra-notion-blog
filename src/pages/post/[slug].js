@@ -7,19 +7,23 @@ import ArticleContent from '@/components/Post/ArticleContent';
 import ArticleFooter from '@/components/Post/ArticleFooter';
 import SuggestArticle from '@/components/Post/SuggestArticle';
 import SubscribeForm from '@/components/Post/SubscribeForm';
+import MetaHead from '@/components/misc/MetaHead';
 
 const Post = () => {
   return (
-    <Layout>
-      <Container>
-        <HeroPost />
-        <AuthorBox />
-        <ArticleContent />
-        <ArticleFooter />
-        <SuggestArticle />
-        <SubscribeForm />
-      </Container>
-    </Layout>
+    <>
+      <MetaHead />
+      <Layout>
+        <Container>
+          <HeroPost />
+          <AuthorBox />
+          <ArticleContent />
+          <ArticleFooter />
+          <SuggestArticle />
+          <SubscribeForm />
+        </Container>
+      </Layout>
+    </>
   );
 };
 
