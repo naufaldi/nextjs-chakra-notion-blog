@@ -12,7 +12,12 @@ import MetaHead from '@/components/misc/MetaHead';
 const Post = () => {
   return (
     <>
-      <MetaHead />
+      <MetaHead
+        title="Blog Platform"
+        description="A few words about this blog platform, Ghost, and how this site was made"
+        heroImage="/img/hero-img.png"
+        type="article"
+      />
       <Layout>
         <Container>
           <HeroPost />
