@@ -8,7 +8,7 @@
       "@/utils/*": ["utils/*"],
       "@/context/*": ["context/*"],
       "@/data/*": ["data/*"],
-      "@/lib/*": ["src/lib/*"],
+      "@/lib/*": ["lib/*"],
     }
   }
 }
