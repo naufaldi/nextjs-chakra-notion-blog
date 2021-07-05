@@ -5,9 +5,11 @@ import Image from 'next/image';
 import React from 'react';
 import { Container } from '../misc/Container';
 import Link from 'next/link';
+import TextHead from '../misc/TextHead';
 
-const ListArticle = () => {
+const ListArticle = ({ posts }) => {
   const colorFont = useColorModeValue('black', 'white');
+  console.log('Name List ', posts[0].properties.Name.title);
   return (
     <Container>
       <Grid templateColumns="repeat(12,1fr)" gap={8} w="full">
@@ -32,8 +34,8 @@ const ListArticle = () => {
             w="full"
             mt="40px"
           >
-            {dummy &&
-              dummy.map((data, index) => (
+            {posts &&
+              posts.map((data, index) => (
                 <Link href="/post/slug" passHref key={index}>
                   <GridItem as="article" cursor="pointer">
                     <Box
@@ -42,7 +44,7 @@ const ListArticle = () => {
                       position="relative"
                     >
                       <Image
-                        src={data.img}
+                        src="/img/news/news-1.png"
                         width={304}
                         height={176}
                         layout="responsive"
@@ -50,16 +52,7 @@ const ListArticle = () => {
                       />
                     </Box>
                     <Box p="20px">
-                      <Heading
-                        as="h6"
-                        fontFamily="sans-serif"
-                        fontWeight="medium"
-                        fontSize="xl"
-                        textAlign="center"
-                        textTransform="capitalize"
-                      >
-                        {data.title}
-                      </Heading>
+                      <TextHead text={data.properties.Name.title} />
                     </Box>
                   </GridItem>
                 </Link>
